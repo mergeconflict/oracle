@@ -1,0 +1,12 @@
+name:           recursive-state
+version:        0.1
+cabal-version:  >= 1.9.2
+build-type:     Simple
+
+library
+  hs-source-dirs:  src/main
+  build-depends:   base >= 4,
+                   mtl,
+                   transformers
+  ghc-options:     -Wall
+  exposed-modules: Control.Monad.State.Recursive
