@@ -8,6 +8,7 @@ module Control.Monad.State.Recursive
        , future
        , evalRecStateT
        , execRecStateT
+       , lift
        ) where
 
 import           Control.Applicative (Alternative, Applicative, (<$>))
@@ -18,7 +19,7 @@ import           Control.Monad.IO.Class (MonadIO)
 import           Control.Monad.Reader (MonadReader)
 import           Control.Monad.Writer (MonadWriter)
 import           Control.Monad.Error (MonadError)
-import           Control.Monad.Trans (MonadTrans)
+import           Control.Monad.Trans (MonadTrans, lift)
 import qualified Control.Monad.State as S
 
 newtype RecStateT s m a = RecStateT (S.StateT (s, s) m a) deriving
